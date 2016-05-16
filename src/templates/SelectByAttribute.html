@@ -1,0 +1,27 @@
+<div data-dojo-type="dijit/layout/ContentPane"  data-dojo-attach-point="selectByAttribute">
+    <table cellspacing="0" class="select-by-attr-table">
+        <tbody>
+            <tr>
+                <td class="first">${nls.sourceLayerList}</td>
+                <td class="second">
+                    <div class="jimu-list select-by-attr-sourcelayerlist" data-dojo-type="dijit/form/Select" data-dojo-attach-point="sourceLayerList" data-dojo-props="required:'true'"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table cellspacing="0" class="select-by-attr-exp-titles">
+        <tbody>
+            <tr>
+                <td style="width:30%;text-align:center;">${nls.fields}</td>
+                <td style="width: 30%; text-align: center;">${nls.operator}</td>
+                <td style="width: 40%;">
+                    <div style="position:relative;float:right;margin-right:10px;width:120px;" class="jimu-btn-small" data-dojo-attach-event="click:_onAddExpression">${nls.addExpression}</div>
+                    <div style ="height:30px;line-height:30px;text-align:center;">${nls.value}</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="expContainer" class="exp-container"></div>
+</div>
+
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/subversion/gbs/!svn/ver/11636/GBS/WAB%20Demo%20Site/stemapp/widgets/Select/templates
+END
+SelectByAttribute.html
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/subversion/gbs/!svn/ver/11581/GBS/WAB%20Demo%20Site/stemapp/widgets/Select/templates/SelectByAttribute.html
+END
+SelectByFeature.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/subversion/gbs/!svn/ver/11636/GBS/WAB%20Demo%20Site/stemapp/widgets/Select/templates/SelectByFeature.html
+END
+SelectByGeometry.html
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/subversion/gbs/!svn/ver/11636/GBS/WAB%20Demo%20Site/stemapp/widgets/Select/templates/SelectByGeometry.html
+END

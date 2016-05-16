@@ -1,0 +1,156 @@
+.jimu-widget-select-setting{
+  margin:0;
+  padding:0;
+  font-size: 14px;
+  padding-top: 20px;
+  color: #596679;
+}
+.jimu-widget-select-setting .jimu-tab{
+  position: static;
+}
+
+.jimu-widget-select-setting .query-types-content {
+    position:relative;
+    width:100%;
+    float:left;
+    overflow:auto;
+    margin-top:5px;
+}
+.jimu-widget-select-setting .query-types-title {
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    color: #596679;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    float: left;
+}
+.query-types-content .query-type {
+    width:80%;
+    margin-top:10px;
+}
+.jimu-widget-select-setting .add-with-icon.jimu-state-disabled{
+  color: #ccc;
+  cursor: default;
+}
+.distance-section {
+    width:250px;
+}
+.jimu-widget-select-setting .exclude-table {
+    position:relative;
+    width:100%;
+    float:left;
+    max-height:250px;
+    overflow:auto;
+    margin-top:5px;
+}
+
+.jimu-widget-select-setting .add-icon{
+  background-image: url(images/add_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.jimu-widget-select-setting .add-exclude-layers,.jimu-widget-select-setting .add-buffer-distance{
+  margin-bottom: 7px;
+  cursor: pointer;
+  display: inline-block;
+  position:relative;
+  float:left;
+  margin-top:15px;
+}
+
+.jimu-widget-select-setting .add-label{
+  font-size: 14px;
+  color: #518dca;
+  margin-left: 10px;
+  /* line-height: 24px; */
+  display: inline-block;
+  height: 100%;
+  text-decoration: underline;
+}
+
+.jimu-widget-select-setting  .symbology-chooser-title {
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    color: #596679;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.jimu-select-zoom {
+
+
+}
+.jimu-widget-select-setting .symbology-chooser-section {
+     position: relative;
+     width:100%;
+     float:left;
+     margin-top:20px;
+}
+.jimu-widget-select-setting .symbology-chooser-section > table {
+    width:100%;
+}
+.jimu-widget-select-setting .symbology-chooser-section > table > tbody > tr > td {
+    padding-bottom:20px;
+}
+.jimu-widget-select-setting .symbology-chooser-section td.first {
+    width:310px;
+}
+
+.colour-btn {
+  background-color: none  !important;
+  padding:0px !important;
+  margin:0px !important;
+  border-radius: 5px;
+  width:24px !important;
+  height:24px !important;
+  border:1px solid #ccc !important;
+}
+.colour-btn .dijitArrowButtonInner{
+    display:none !important
+}
+.colour-btn .dijitButtonNode {
+    padding:0px !important;
+    margin:0px !important;
+    background:none !important;
+    border:0px solid transparent !important;
+    height:100% !important;
+    width:100% !important;
+    box-shadow:none !important;
+}
+.colour-btn .dijitDropDownButtonHover{
+    background:none !important;
+}
+
+
+.jimu-widget-select-setting .form-table {
+    width:100%;
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+}
+.jimu-widget-select-setting .form-table td {
+    padding-bottom:10px;
+}
+.jimu-widget-select-setting .form-table td.first {
+    width: 150px;
+}
+
+.jimu-widget-select-setting .add-exclude-fields{
+  margin-bottom: 7px;
+  cursor: pointer;
+  display: inline-block;
+  position:relative;
+  float:left;
+}
+

@@ -1,0 +1,118 @@
+<div style="width:100%;height:auto;">
+    <div class="query-types-content">
+        <div class="query-types-title">${nls.queryTypesTitle}</div>
+        <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="spatialQueryUsingGeometry" data-dojo-props='label:"${nls.spatialQueryUsingGeometry}"' align="center" class="jimu-trailing-margin6 query-type"></div>
+        <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="spatialQueryUsingFeature" data-dojo-props='label:"${nls.spatialQueryUsingFeature}"' align="center" class="jimu-trailing-margin6 query-type"></div>
+        <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="attributeQuery" data-dojo-props='label:"${nls.attributeQuery}"' align="center" class="jimu-trailing-margin6 query-type"></div>
+    </div>
+    <div class="query-types-content" style="margin-top:10px;">
+        <div class="query-types-title">${nls.featureSelectionModeTitle}</div>
+        <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="featureSelectionModesEnabled" data-dojo-props='label:"${nls.featureSelectionModesEnabled}"' align="center" class="jimu-trailing-margin6 query-type"></div>
+    </div>
+    <div class="query-types-content" style="margin-top:10px;">
+        <div class="query-types-title">${nls.targetLayerForSelectByFeatureTitle}</div>
+        <table cellspacing="0" class="form-table">
+            <tbody>
+                <tr>
+                    <td class="first" style="width:265px;">${nls.targetLayerForSelectByFeature}</td>
+                    <td class="second">
+                        <input type="text" data-dojo-type="dijit/form/TextBox"
+                               data-dojo-attach-point="targetLayerForSelectByFeature"
+                               data-dojo-props="style:{width:'600px',marginLeft:'10px'}" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+	<div class="query-setting-content" data-dojo-attach-point="content">
+		<div class="distance-section" data-dojo-attach-point="distanceTabNode" onselectstart="return false;">
+			<div class="add-buffer-distance"  data-dojo-attach-point="btnAddBuffer">
+                <span class="add-icon" data-dojo-attach-point="btnAddDistanceIcon"></span>
+				<span class="add-label">${nls.addBuffer}</span>
+			</div>
+            <div data-dojo-attach-point="distanceTable" data-dojo-type='jimu/CustomUtils/SimpleTable' data-dojo-props='fields:[{name:"label",title:"${nls.label}","class":"label",type:"empty",width:"150px"},{name:"actions",title:"${nls.actions}","class":"actions",type:"actions",width:"80px",actions:["delete"]}]'></div>
+		</div>
+	</div>
+    <div class="add-exclude-layers">
+        <span class="add-icon"></span>
+        <span class="add-label" data-dojo-attach-point="addLayerLabel">${nls.addLayersToExclude}</span>
+    </div>
+    <div class="exclude-table" data-dojo-attach-point="excludeLayersTableCntr"></div>
+   
+    <div class="add-exclude-fields" style="margin-top:20px;">
+        <span class="add-icon"></span>
+        <span class="add-label" data-dojo-attach-point="addFieldsLabel">${nls.addFieldsToExclude}</span>
+    </div>
+    <div class="exclude-table" data-dojo-attach-point="excludeFieldsTableCntr"></div>
+    <table cellspacing="0" class="form-table">
+        <tbody>
+            <tr>
+                <td class="first">*${nls.geometryServiceUrl}</td>
+                <td class="second">
+                    <input type="text" data-dojo-type="dijit/form/TextBox"
+                           data-dojo-attach-point="geometryServiceUrl"
+                           data-dojo-props="style:{width:'600px',marginLeft:'10px'}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table cellspacing="0" class="form-table">
+        <tbody>
+            <tr>
+                <td class="first">${nls.attributeQueryMaxCount}</td>
+                <td class="second">
+                    <input type="text" data-dojo-type="dijit/form/TextBox"
+                           data-dojo-attach-point="attributeQueryMaxCount"
+                           data-dojo-props="style:{width:'50px',marginLeft:'10px'}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div data-dojo-type="jimu/dijit/CheckBox" data-dojo-attach-point="zoomToResults" data-dojo-props='label:"${nls.zoomToResults}"' class="jimu-select-zoom"></div>
+    <div class="symbology-chooser-title">${nls.symbologySectionTitle}</div>
+    <div class="symbology-chooser-section">
+        <table cellspacing="0">
+            <tbody>
+                <tr>
+                    <td class="first">${nls.fillColour}</td>
+                    <td class="second">
+                        <div class='colour-btn' data-dojo-type="dijit/form/DropDownButton" data-dojo-props="showLabel:'false'" data-dojo-attach-point="fillColourBtn">
+                            <div data-dojo-type="dijit/TooltipDialog">
+                                <div data-dojo-type="dijit/ColorPalette" data-dojo-attach-point="fillColour" data-dojo-props="palette:'7x10'"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">${nls.fillTransparency}</td>
+                    <td class="second">
+                        <div style="width:250px;"
+                             data-dojo-attach-point="fillTransparency"
+                             data-dojo-type="dijit/form/HorizontalSlider"
+                             data-dojo-props="value:0,minimum: 0,maximum:100,discreteValues:101,intermediateChanges:true,showButtons:false"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">${nls.highlightColour}</td>
+                    <td class="second">
+                        <div class='colour-btn' data-dojo-type="dijit/form/DropDownButton" data-dojo-props="showLabel:'false'" data-dojo-attach-point="highlightColourBtn">
+                            <div data-dojo-type="dijit/TooltipDialog">
+                                <div data-dojo-type="dijit/ColorPalette" data-dojo-attach-point="highlightColour" data-dojo-props="palette:'7x10'"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">${nls.highlightTransparency}</td>
+                    <td class="second">
+                        <div style="width:250px;"
+                             data-dojo-attach-point="highlightTransparency"
+                             data-dojo-type="dijit/form/HorizontalSlider"
+                             data-dojo-props="value:0,minimum: 0,maximum:100,discreteValues:101,intermediateChanges:true,showButtons:false"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

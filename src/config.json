@@ -1,0 +1,58 @@
+{
+  "distanceUnits": [
+    {
+      "label": "Meters",
+      "unit": "UNIT_METER",
+      "enabled": true
+    },
+	{
+      "label": "Kilometers",
+      "unit": "UNIT_KILOMETER",
+      "enabled": true
+    },
+    {
+      "label": "Miles",
+      "unit": "UNIT_STATUTE_MILE",
+      "enabled": true
+    },
+    {
+      "label": "Feet",
+      "unit": "UNIT_FOOT",
+      "enabled": true
+    },
+    {
+      "label": "Yards",
+      "unit": "UNIT_INTERNATIONAL_YARD",
+      "enabled": true
+    }
+  ],
+  "excludableLayers": [
+    {
+      "service": "Service-1",
+       "layerNames": "Layer-1,Group-2,Layer-3"
+    },
+	{
+      "service": "Folder-1/Service-2",
+      "layerNames":""
+    }
+  ],
+  "excludedFields":["OBJECTID","SHAPE","GlobalID"],
+  "geometryServiceUrl": "https://bokke.geobiz.local/arcgis/rest/services/Utilities/Geometry/GeometryServer",
+  "relationTypes":[{"name":"Intersects" ,"id":"SPATIAL_REL_INTERSECTS"},{"name":"Are within" ,"id":"SPATIAL_REL_CONTAINS"}],
+  "selectionModes":[{ "name": "Select", "id": "select" }, { "name": "Add", "id": "add" },{"name":"Reselect","id":"reselect"},{"name":"Deselect","id":"deselect"}],
+  "attributeQueryMaxCount":5,
+  "zoomToResults":true,
+  "symbology": {
+    "fillColour": "#ff0000",
+    "fillTransparency": 70,
+    "highlightColour": "#48d1cc",
+    "highlightTransparency": 88
+  },
+  "queryTypes":{
+	"spatialQueryUsingGeometry":true,
+	"spatialQueryUsingFeature":true,
+	"attributeQuery":true
+  },
+  "targetLayerForSelectByFeature":"",
+  "selectionModesEnabled":true
+}

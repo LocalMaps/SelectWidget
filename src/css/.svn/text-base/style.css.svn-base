@@ -1,0 +1,326 @@
+.jimu-select-pane-cntr{
+   position:absolute;
+   margin:0 auto;
+   bottom:38px;
+   top:0px;
+   height:auto;
+   width:100%;
+}
+.jimu-select-pane-cntr .dijitTabPaneWrapper{
+    width:100% !important;
+}
+.jimu-widget-select-by-geom {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.select-by-geom-table {
+    width:100%;
+    position:relative;
+    float:left;
+    margin-top:10px;
+}
+.select-by-geom-table td.first{
+    width:135px;
+    position:relative;
+    float:left;
+    padding:10px 0px;
+    text-align:right;
+}
+.jimu-widget-select-by-attr {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.select-by-attr-table,.select-by-attr-exp-titles {
+    width:100%;
+    position:relative;
+    float:left;
+    margin-top:10px;
+}
+.select-by-attr-table td.first{
+    width:135px;
+    position:relative;
+    float:left;
+    padding:10px 0px;
+    text-align:right;
+}
+/*select-by feature*/
+.jimu-widget-select-by-feat {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.select-by-feat-table {
+    width:100%;
+    position:relative;
+    float:left;
+    margin-top:10px;
+}
+.select-by-feat-table td.first{
+    width:135px;
+    position:relative;
+    float:left;
+    padding:10px 0px;
+    text-align:right;
+}
+
+
+/* geometry drawing tools*/
+.geom-tool-container {
+    padding:0px 0px 0px 0px !important;
+}
+.geom-tool {
+    position:relative;
+    width:40px;
+    height:40px;
+    margin:10px 10px 0px 0px;
+    cursor:pointer;
+    float:left;
+}
+/* point */
+.point{
+    background: url("../images/point.png") no-repeat scroll center center transparent !important;
+} 
+.active.point{
+    background-color:#c0c0c0 !important;
+}
+.hover.point {
+    background-color:#c0c0c0 !important;
+} 
+/* polyline */
+.polyline{
+    background: url("../images/polyline.png") no-repeat scroll center center transparent !important;
+} 
+.active.polyline{
+    background-color:#c0c0c0 !important;
+}
+.hover.polyline {
+    background-color:#c0c0c0 !important;
+} 
+/* polygon */
+.polygon{
+       background: url("../images/polygon.png") no-repeat scroll center center transparent !important;
+} 
+.active.polygon{
+    background-color:#c0c0c0 !important;
+}
+.hover.polygon {
+    background-color:#c0c0c0 !important;
+} 
+/* circle */
+.circle{
+      background: url("../images/circle.png") no-repeat scroll center center transparent !important;
+} 
+.active.circle{
+    background-color:#c0c0c0 !important;
+}
+.hover.circle {
+    background-color:#c0c0c0 !important;
+} 
+
+/* rectangle */
+.rectangle{
+       background: url("../images/rectangle.png") no-repeat scroll center center transparent !important;
+} 
+.active.rectangle{
+    background-color:#c0c0c0 !important;
+}
+.hover.rectangle {
+    background-color:#c0c0c0 !important;
+} 
+
+/* fh_polygon */
+.fh_polygon{
+       background: url("../images/fh_polygon.png") no-repeat scroll center center transparent !important;
+} 
+.active.fh_polygon{
+    background-color:#c0c0c0 !important;
+}
+.hover.fh_polygon {
+    background-color:#c0c0c0 !important;
+} 
+
+.jimu-select-pane-btn-cntr{
+   position:absolute;
+   margin:0 auto;
+   bottom:0px;
+   height:36px;
+   padding:0px !important;
+   width:100%;
+   overflow:hidden;
+}
+.jimu-select-widget-btn {
+    position:relative;
+    float:right;
+}
+/*----------add expression section-------*/
+.add-exp-btn {
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+    cursor:pointer;
+    border:1px solid green;
+
+}
+.exp-container {
+    width:100%;
+    position:relative;
+    float:left;
+    padding:0px !important;
+    margin-top:10px;
+}
+
+/*  expression builder */
+.exp-wrapper-panel {
+    margin-bottom:10px;
+    position:relative;
+    width:100% !important;
+    height:30px !important;
+    float:left;
+    overflow:hidden;
+    padding:0px !important;
+}
+.exp-fieldList-cntr {
+    position:relative;
+    float:left;
+    width:30%;
+    font-size:12px;
+}
+.exp-operatorList-cntr {
+    position:relative;
+    float:left;
+    width:30%;
+    font-size:12px;
+    margin-left:10px;
+    text-align:center;
+}
+.exp-fieldValue-cntr {
+    position:relative;
+    float:left;
+    width:30%;
+    font-size:12px;
+    margin-left:10px;
+}
+.exp-builder-button {
+    position:relative;
+    float:right;
+    width:16px;
+    height:16px;
+    margin: 0 5px 5px 3px !important;
+    box-shadow:none !important;
+    border:none !important;
+}
+.exp-builder-button .dijitButtonNode{
+    height: 16px !important;
+    width:  16px !important;
+    padding:0px !important;
+    background:none !important;
+    border:none !important;
+    margin:0 !important;
+    box-shadow:none !important;
+}
+.remove-query-exp {
+    width:16px;
+    height:16px;
+    background: url("../images/close.png") center center no-repeat;
+}
+.remove-query-exp:hover {
+    background: url("../images/close-hover.png") center center no-repeat;
+}
+
+
+/* --selct by attr Filtering Select - > default Select adjustments*/
+.exp-builder-fieldlist{
+    width:100%;
+}
+.exp-builder-fieldlist .dijitSelectLabel {
+    width:100% !important;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.exp-builder-oplist {
+    width:80% !important;
+}
+.exp-builder-oplist .dijitSelectLabel {
+    width:100% !important;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.exp-builder-valuelist {
+      width:100% !important;
+}
+.exp-builder-valuelist .dijitSelectLabel {
+    width:100% !important;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.select-by-attr-sourcelayerlist .dijitSelectLabel {
+    width:150px; 
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+/* --selct by geom Filtering Select - > default Select adjustments*/
+.select-by-geom-sourcelayerlist .dijitSelectLabel{
+    width:150px;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.select-by-geom-relationList .dijitSelectLabel {
+    width:110px;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.select-by-geom-bufferUnits .dijitSelectLabel {
+    width:75px;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* --selct by feature Filtering Select - > default Select adjustments*/
+
+.select-by-feat-sourcelayerlist .dijitSelectLabel{
+    width:150px;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.select-by-feat-relationList .dijitSelectLabel {
+    width:110px;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+.select-by-feat-bufferUnits .dijitSelectLabel {
+    width:75px;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* select types */
+.jimu-select-modes-cntr {
+    width:200px;
+    height:30px;
+    position:absolute;
+    z-index:100 !important;
+    right:0px;
+}
+.jimu-select-modes-title {
+    position:relative;
+    float:left;
+    height:30px;
+    line-height:30px;
+    width:100px;
+}
+.jimu-select-modes-list {
+    position:relative;
+    float:right;
+}
+
+.jimu-select-modes-list .dijitSelectLabel{
+    width:50px !important;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+}
+
+

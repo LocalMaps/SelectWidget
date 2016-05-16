@@ -1,0 +1,12 @@
+<div style="height:100%;width:100%;">
+    <div class="jimu-select-modes-cntr" data-dojo-attach-point="selectionModeCntr">
+        <div class="jimu-select-modes-title">${nls.selectionModeTitle}</div>
+        <div class="jimu-list jimu-select-modes-list" data-dojo-type="dijit/form/Select" data-dojo-attach-point="selectionModeList"></div>
+    </div>
+    <div class="jimu-select-pane-cntr" data-dojo-type="dijit/layout/TabContainer" data-dojo-props="useMenu:false,useSlider:false,doLayout:true" data-dojo-attach-point="sectionContainer"></div>
+    <div class="jimu-select-pane-btn-cntr" data-dojo-type="dijit/layout/ContentPane">
+        <div data-dojo-type="dijit/form/Button" class="jimu-btn jimu-select-widget-btn" data-dojo-attach-event="click:_onClear">${nls.clear}</div>
+        <div data-dojo-type="dijit/form/Button" class="jimu-btn jimu-select-widget-btn" data-dojo-attach-event="click:_onApply">${nls.apply}</div>
+    </div>
+</div>
+

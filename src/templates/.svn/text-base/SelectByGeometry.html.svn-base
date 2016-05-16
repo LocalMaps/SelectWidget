@@ -1,0 +1,44 @@
+<div data-dojo-type="dijit/layout/ContentPane"  data-dojo-attach-point="selectByGeometry" data-dojo-props="selected:true">
+    <table cellspacing="0" class="select-by-geom-table">
+        <tbody>
+            <tr>
+                <td class="first" >${nls.sourceLayerList}</td>
+                <td class="second">
+                    <div class="jimu-list select-by-geom-sourcelayerlist" data-dojo-type="dijit/form/Select" data-dojo-attach-point="sourceLayerList" data-dojo-props="required:'true'"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">that</td>
+                <td class="second">
+                    <div class="jimu-list select-by-geom-relationList" data-dojo-type="dijit/form/Select" data-dojo-attach-point="relationList"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">geometry</td>
+                <td class="second">
+                    <!--<div data-dojo-attach-point="drawBox" data-dojo-type="jimu/dijit/DrawBox" data-dojo-props='types:["point","polyline","polygon","text"],showClear:false' style="margin-top:5px;"></div>-->
+                    <div class="geom-tool-container" data-dojo-type="dijit/layout/ContentPane" data-dojo-attach-point="geometryContainer">
+                        <div class="inactive geom-tool point"  data-geotype="POINT"></div>
+                        <div class="inactive geom-tool polyline" data-geotype="POLYLINE"></div>
+                        <div class="inactive geom-tool polygon" data-geotype="POLYGON"></div>
+                        <div class="inactive geom-tool circle" data-geotype="CIRCLE"></div>
+                        <div class="inactive geom-tool rectangle" data-geotype="RECTANGLE"></div>
+                        <div class="inactive geom-tool fh_polygon" data-geotype="FREEHAND_POLYGON"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="first">${nls.addBuffer}</td>
+                <td class="second">
+                    <div  style="position:relative;float:left;height:27px;margin:10px 0  0 0px;">
+                        <input data-dojo-attach-point="bufferDistanceSelect" data-dojo-type="dijit/form/NumberSpinner" style="float: left;width:75px;height: 27px;"
+                               data-dojo-props='value:0,smallDelta:1,intermediateChanges:true'></input>
+                    </div>
+                    <div style="position:relative;float:left;height:27px;margin:10px 0  0 7px;">
+                        <select class="jimu-list select-by-geom-bufferUnits" data-dojo-attach-point="bufferUnitSelect" data-dojo-type="dijit/form/Select" style="float: left;height: 27px;"></select>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
