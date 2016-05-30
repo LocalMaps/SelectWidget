@@ -1,0 +1,23 @@
+{
+  "version": "1.4.0",
+  "description": "Widget which display the results of any interrogate operation.",
+  "files": [ "src" ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LocalMaps/SelectWidget.git"
+  },
+  "keywords": [
+    "LocalMaps",
+    "Widget",
+    "Select",
+    "Interrogate"
+  ],
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "bugs": {
+    "url": "https://github.com/LocalMaps/SelectWidget/issues"
+  },
+  "homepage": "https://github.com/LocalMaps/SelectWidget#readme"
+}
