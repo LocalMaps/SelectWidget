@@ -242,6 +242,7 @@ function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _
                 this.selectUtil.doSelect(queryParams).then(lang.hitch(this, function () {
                     this._displayResultsPanel();
                     this._hideLoading();
+                    this._hideWidgetPanel(this.id + '_panel');
                 }));
             }
         },
@@ -379,7 +380,12 @@ function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _
             }
             return labelNode;
 
-        }
+        },
+        _hideWidgetPanel: function (panelId) {
 
+            if (panelId === null || panelId === '') return;
+
+            PanelManager.getInstance().closePanel(panelId);
+        }
     });
 });
