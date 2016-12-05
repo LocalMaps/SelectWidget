@@ -97,11 +97,14 @@
             if (params.bufferValue != 0) {
                 params.map = this.map;
                 QueryUtil.createBuffer(params).then(lang.hitch(this,function (bufferGeoms) {
-                    topic.publish("SELECT_BUFFER_CREATED", bufferGeoms);
+                    
                     params.inputGeometries = bufferGeoms;
                     this._executeSpatialQuery(params, queryableLayerConfigCache).then(lang.hitch(this,function (res) {
                         this._processResponses(queryableLayerConfigCache, res);
-                        deferred.resolve()
+                        deferred.resolve();
+                        // HACK ALERT!!!! the buffer was never shown due to a timing condition that meant the layer got cleared straight away.
+                        // Do this chuff so that it gets added after the layer is cleared
+                        window.setTimeout(function () { topic.publish("SELECT_BUFFER_CREATED", bufferGeoms, params.bufferSymbol); }, 1000);                        
                     }));
 
                 }), function (err) {

@@ -18,6 +18,7 @@ define([
     'jimu/BaseWidget',
     'jimu/dijit/DrawBox',
     'jimu/dijit/Message',
+    'jimu/dijit/SymbolChooser',
     'dijit/_TemplatedMixin',
     'dijit/_WidgetsInTemplateMixin',
     'dijit/layout/ContentPane',
@@ -28,7 +29,7 @@ define([
     'jimu/CustomUtils/MiscUtil',
     'dojo/text!./templates/SelectByGeometry.html'
 ],
-function (declare, lang, array, on, aspect, topic, Deferred, domQuery, domAttr, domStyle, domClass, domConstruct, mouse, all, Draw, Graphic, BaseWidget,DrawBox,Message,_TemplatedMixin, _WidgetsInTemplateMixin, ContentPane,
+function (declare, lang, array, on, aspect, topic, Deferred, domQuery, domAttr, domStyle, domClass, domConstruct, mouse, all, Draw, Graphic, BaseWidget, DrawBox, Message, SymbolChooser,_TemplatedMixin, _WidgetsInTemplateMixin, ContentPane,
     Memory, Select, NumberSpinner, MapUtil, MiscUtil,template
     ) {
     return declare([BaseWidget, _WidgetsInTemplateMixin, _TemplatedMixin], {
@@ -49,6 +50,10 @@ function (declare, lang, array, on, aspect, topic, Deferred, domQuery, domAttr, 
             this._renderToolbar();
             this._attachHoverHandlers();
             this._attachClickHandlers();
+
+            this._bufferFillSymbolChooser = new SymbolChooser({
+                type: "fill"
+            }, this.bufferFillSymChooserNode);
         },
         startup:function(){
             this.inherited(arguments);
@@ -69,7 +74,7 @@ function (declare, lang, array, on, aspect, topic, Deferred, domQuery, domAttr, 
         addToolGraphic:function(evtArray){
             var results = [];
             array.forEach(evtArray, lang.hitch(this, function (e) {
-                var feature = new Graphic(e.geometry);
+                var feature = new Graphic(e.geometry, e.symbol);
                 results.push({
                     features: [feature],
                     geometryType: e.geometry.type
@@ -304,12 +309,17 @@ function (declare, lang, array, on, aspect, topic, Deferred, domQuery, domAttr, 
                 relationType: this.relationList.get("value"),
                 bufferValue: this.bufferDistanceSelect.get("value"),
                 bufferUnit: this.bufferUnitSelect.get("value"),
-                geometryService: this.config.geometryServiceUrl
+                geometryService: this.config.geometryServiceUrl,
+                bufferSymbol: this._bufferFillSymbolChooser.getSymbol()
             }
         },
         destroy: function () {
             this.resetTools(this.map);
             this.inherited(arguments);
+            if (this._bufferFillSymbolChooser) {
+                this._bufferFillSymbolChooser.destroy();
+                this._bufferFillSymbolChooser = null;
+            }
         },
         _getOption: function (value) {
             return array.filter(this.sourceLayerList.options, function (option) {
