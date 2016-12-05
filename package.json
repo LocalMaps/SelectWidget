@@ -1,6 +1,6 @@
 {
   "name": "nzgisco-select-widget",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Widget which display the results of any interrogate operation.",
   "files": [ "src" ],
   "scripts": {
