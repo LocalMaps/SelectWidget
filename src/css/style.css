@@ -100,6 +100,16 @@
 .hover.polyline {
     background-color:#c0c0c0 !important;
 } 
+/* freehand-polyline */
+.fh-polyline{
+    background: url("../images/fh_polyline.png") no-repeat scroll center center transparent !important;
+} 
+.active.fh-polyline{
+    background-color:#c0c0c0 !important;
+}
+.hover.fh-polyline {
+    background-color:#c0c0c0 !important;
+}
 /* polygon */
 .polygon{
        background: url("../images/polygon.png") no-repeat scroll center center transparent !important;
@@ -120,7 +130,16 @@
 .hover.circle {
     background-color:#c0c0c0 !important;
 } 
-
+/* ellipse */
+.ellipse{
+      background: url("../images/ellipse.png") no-repeat scroll center center transparent !important;
+} 
+.active.ellipse{
+    background-color:#c0c0c0 !important;
+}
+.hover.ellipse {
+    background-color:#c0c0c0 !important;
+} 
 /* rectangle */
 .rectangle{
        background: url("../images/rectangle.png") no-repeat scroll center center transparent !important;
