@@ -104,7 +104,7 @@
                         deferred.resolve();
                         // HACK ALERT!!!! the buffer was never shown due to a timing condition that meant the layer got cleared straight away.
                         // Do this chuff so that it gets added after the layer is cleared
-                        window.setTimeout(function () { topic.publish("SELECT_BUFFER_CREATED", bufferGeoms, params.bufferSymbol); }, 1000);                        
+                        window.setTimeout(function () { topic.publish("SELECT_BUFFER_CREATED", bufferGeoms, params.bufferSymbol, inputGeometries); }, 1000);                        
                     }));
 
                 }), function (err) {

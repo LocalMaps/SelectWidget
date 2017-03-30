@@ -159,10 +159,13 @@ function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _
             })));
         },
         _listenToBufferCreationEvent:function(){
-            this._subscribers.push(topic.subscribe("SELECT_BUFFER_CREATED", lang.hitch(this, function (bufferedGeoms, symbol) {
+            this._subscribers.push(topic.subscribe("SELECT_BUFFER_CREATED", lang.hitch(this, function (bufferedGeoms, symbol, originalGeoms) {
                 var eventArray = [];
                 array.forEach(bufferedGeoms, function (geom) {
                     eventArray.push({ geometry: geom, symbol: symbol });
+                });
+                array.forEach(originalGeoms, function (geom) {
+                    eventArray.push({ geometry: geom });
                 });
                 //how to distinguish  whether the buffer is created from selectByGeom or selectByFeature//so following line needs to be changed
                 //and needs to use a different logic to identify which sub section is required
