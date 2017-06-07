@@ -12,12 +12,13 @@ define([
     'dijit/_TemplatedMixin',
     'jimu/BaseWidget',
     'dojo/dom-construct',
-    'dojo/dom-style',
+    
      'dijit/form/CheckBox',
     'jimu/WidgetManager',
     'jimu/PanelManager',
     'jimu/dijit/LoadingShelter',
     'jimu/dijit/Message',
+    
     'dijit/layout/TabContainer',
     'jimu/CustomUtils/MapUtil',
     "./SelectUtil",
@@ -25,7 +26,7 @@ define([
     './SelectByAttribute',
     './SelectByFeature'
 ],
-function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _WidgetsInTemplateMixin, _TemplatedMixin, BaseWidget, domConstruct,domStyle, CheckBox,WidgetManager, PanelManager, LoadingShelter, Message, TabContainer, MapUtil, SelectUtil,
+function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _WidgetsInTemplateMixin, _TemplatedMixin, BaseWidget, domConstruct, CheckBox,WidgetManager, PanelManager, LoadingShelter, Message, TabContainer, MapUtil, SelectUtil,
     SelectByGeometry, SelectByAttribute, SelectByFeature
     ) {
     return declare([BaseWidget, _WidgetsInTemplateMixin, _TemplatedMixin], {
@@ -159,13 +160,10 @@ function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _
             })));
         },
         _listenToBufferCreationEvent:function(){
-            this._subscribers.push(topic.subscribe("SELECT_BUFFER_CREATED", lang.hitch(this, function (bufferedGeoms, symbol, originalGeoms) {
+            this._subscribers.push(topic.subscribe("SELECT_BUFFER_CREATED", lang.hitch(this, function (bufferedGeoms, symbol) {
                 var eventArray = [];
                 array.forEach(bufferedGeoms, function (geom) {
                     eventArray.push({ geometry: geom, symbol: symbol });
-                });
-                array.forEach(originalGeoms, function (geom) {
-                    eventArray.push({ geometry: geom });
                 });
                 //how to distinguish  whether the buffer is created from selectByGeom or selectByFeature//so following line needs to be changed
                 //and needs to use a different logic to identify which sub section is required
@@ -199,6 +197,7 @@ function (declare, lang, array, on, topic,aspect, domQuery, domStyle, domAttr, _
             window.setTimeout(function () {
                 MapUtil.disableDefaultClickHandler(map);//the delay is to make sure all other possible enabling default click handlers are overriden;
             }, 100);
+            PanelManager.getInstance().maximizePanel(this.id + '_panel');
         },
         _onClear:function(){
             this._resetSelectModules(true,true,true);
